@@ -73,7 +73,7 @@ You can view all orders associated with your account at any time. The system mai
 
 ### 2.6 General FAQ (`general_faq`)
 
-Our Intelligent Customer Success & Service Automation platform operates 24/7 across voice calls, web chat, emails, and portals. Available services include:
+Our Business Agent platform operates 24/7 across voice calls, web chat, emails, and portals. Available services include:
 
 - Real-time order tracking and account order history
 - Product pricing and subscription plan information
@@ -248,4 +248,4 @@ Matched patterns are masked with `[REDACTED]` before reaching any logging or obs
 
 ---
 
-*This document is the authoritative reference for all AI behavioral rules, knowledge content, and operational policies within the Intelligent Customer Success & Service Automation platform.*
+*This document is the authoritative reference for all AI behavioral rules, knowledge content, and operational policies within the Business Agent platform.*

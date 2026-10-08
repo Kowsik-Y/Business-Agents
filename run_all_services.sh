@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Intelligent Customer Success & Service Automation — System Orchestration Runner
+# Business Agent — System Orchestration Runner
 # Spins up local infrastructure, all Node/TS web frontends and microservices,
 # and Python AI Orchestrator + Voice Service engines in a single terminal session.
 # ==============================================================================
@@ -23,7 +23,7 @@ trap cleanup SIGINT SIGTERM EXIT SIGHUP
 
 clear
 echo -e "\033[1;36m=================================================================================\033[0m"
-echo -e "\033[1;37m🚀 STARTING INTELLIGENT CUSTOMER SUCCESS & SERVICE AUTOMATION PLATFORM 🚀\033[0m"
+echo -e "\033[1;37m🚀 STARTING BUSINESS AGENT PLATFORM 🚀\033[0m"
 echo -e "\033[1;36m=================================================================================\033[0m"
 echo -e "\033[1;32m[1/3] Checking & releasing any orphaned application ports...\033[0m"
 for port in 3000 3001 3002 8000 8001 8002 8003 8004 8005 8006; do

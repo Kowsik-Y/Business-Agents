@@ -1,6 +1,6 @@
-# Intelligent Customer Success & Service Automation
+# Business Agent
 
-An advanced, enterprise-grade omnichannel AI-powered customer success and service automation platform built as a polyglot monorepo. This system integrates real-time web support, conversational voice streaming, durable business workflow automation, and human-in-the-loop agent escalations into a single cohesive architecture.
+An advanced, enterprise-grade omnichannel AI-powered Business Agent platform built as a polyglot monorepo. This system integrates real-time web support, conversational voice streaming, durable business workflow automation, and human-in-the-loop agent escalations into a single cohesive architecture.
 
 ---
 

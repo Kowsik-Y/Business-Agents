@@ -2,6 +2,11 @@
   "name": "@csp/typescript-config",
   "version": "0.1.0",
   "private": true,
+  "exports": {
+    "./*.json": "./*.json",
+    "./*": "./*",
+    ".": "./base.json"
+  },
   "files": [
     "base.json",
     "nextjs.json",

@@ -54,7 +54,7 @@ export default function AdminConsoleHome() {
                 </span>
               </div>
               <p className="text-xs text-slate-400 font-medium">
-                Intelligent Customer Success & Service Automation • Zero-Database Platform Config
+                Business Agent • Zero-Database Platform Config
               </p>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function AdminConsoleHome() {
 
       {/* Footer */}
       <footer className="max-w-7xl mx-auto w-full px-6 pt-12 text-[11px] text-slate-500 font-mono flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-white/5 mt-12">
-        <p>Intelligent Customer Success & Service Automation Platform v0.1.0 (PROD)</p>
+        <p>Business Agent Platform v0.1.0 (PROD)</p>
         <div className="flex items-center gap-4">
           <span>Active Admin: <strong className="text-slate-300">{activeAdmin.name}</strong></span>
           <span>•</span>

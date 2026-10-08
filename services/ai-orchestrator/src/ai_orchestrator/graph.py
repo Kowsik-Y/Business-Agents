@@ -46,7 +46,7 @@ KNOWLEDGE_BASE: dict[str, str] = {
         "including current shipping status, carrier details, tracking numbers, and estimated delivery dates. Simply ask to see your orders."
     ),
     "general_faq": (
-        "Our Intelligent Customer Success & Service Automation platform operates 24/7 across voice calls, web chat, emails, and portals. "
+        "Our Business Agent platform operates 24/7 across voice calls, web chat, emails, and portals. "
         "We can check real-time order tracking, list all your account orders, discuss product pricing and warranty policies, resolve technical issues, or escalate sensitive operations directly to our human support representatives."
     ),
 }

@@ -8,7 +8,7 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: 'Concierge AI - Intelligent Co-pilot & Support Portal',
-  description: 'AI-powered Customer Success and Service Automation with real-time LangGraph orchestration.',
+  description: 'AI-powered Business Agent with real-time LangGraph orchestration.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
