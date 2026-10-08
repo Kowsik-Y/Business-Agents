@@ -1,0 +1,2 @@
+// @csp/ui — stub
+export {};

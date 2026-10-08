@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "fastapi": {
+      "source": "fastapi/fastapi",
+      "sourceType": "github",
+      "skillPath": "fastapi/.agents/skills/fastapi/SKILL.md",
+      "computedHash": "e85d9e223fbc3183b1a599bbe8b02d2edf275d046ff5bcfd14352c92cdff52b3"
+    },
+    "nextjs": {
+      "source": "ulpi-io/skills",
+      "sourceType": "github",
+      "skillPath": "nextjs/SKILL.md",
+      "computedHash": "7f6d1c8c0f66052cbd92e198f988076c585d4fd26a2c70826c147f6a93ed4cae"
+    },
+    "nextjs-shadcn": {
+      "source": "laguagu/claude-code-nextjs-skills",
+      "sourceType": "github",
+      "skillPath": "skills/nextjs-shadcn/SKILL.md",
+      "computedHash": "f0fbba4cc9ce4939499a717871e930b6a11788984655e21bce28a70c2baaf48f"
+    },
+    "openai-docs": {
+      "source": "openai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/.curated/openai-docs/SKILL.md",
+      "computedHash": "0436b5a4e330b85cc5468c772b49f185daa6cd7a8d2b5ff9f6c97df10c5ab373"
+    },
+    "shadcn": {
+      "source": "shadcn/ui",
+      "sourceType": "github",
+      "skillPath": "skills/shadcn/SKILL.md",
+      "computedHash": "c1a68ee06a668aced9ab2b5fbdea5f989864123794eb2e056b339a072dbb7f10"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "extends": "@csp/typescript-config/library.json",
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

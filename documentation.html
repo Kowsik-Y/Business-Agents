@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligent Customer Success & Service Automation Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            fontFamily: 'Inter, -apple-system, sans-serif'
+        });
+    </script>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 15mm 15mm 15mm;
+
+            @top-left {
+                content: none;
+            }
+
+            @top-center {
+                content: none;
+            }
+
+            @top-right {
+                content: none;
+            }
+
+            @bottom-left {
+                content: none;
+            }
+
+            @bottom-center {
+                content: none;
+            }
+
+            @bottom-right {
+                content: none;
+            }
+        }
+
+        @media print {
+            body {
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            @page {
+                margin-top: 10mm;
+                margin-bottom: 10mm;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+            margin: 0;
+            padding: 20px;
+            font-size: 11pt;
+        }
+
+        h1 {
+            font-size: 24pt;
+            color: #111827;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 16pt;
+            color: #1f2937;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 6px;
+            margin-top: 28px;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 13pt;
+            color: #374151;
+            margin-top: 20px;
+            page-break-after: avoid;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 9.5pt;
+            page-break-inside: auto;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        th,
+        td {
+            border: 1px solid #d1d5db;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 9pt;
+            background-color: #f3f4f6;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #dc2626;
+        }
+
+        pre {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 14px;
+            overflow-x: auto;
+            font-size: 9pt;
+            line-height: 1.4;
+            page-break-inside: avoid;
+        }
+
+        pre code {
+            background: none;
+            color: #334155;
+            padding: 0;
+        }
+
+        .mermaid {
+            text-align: center;
+            margin: 24px 0;
+            padding: 12px;
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            border-radius: 8px;
+            page-break-inside: avoid;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e5e7eb;
+            margin: 24px 0;
+        }
+
+        ul,
+        ol {
+            margin: 8px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        em {
+            color: #4b5563;
+            font-size: 9.5pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Intelligent Customer Success &amp; Service Automation Platform</h1>
+
+    <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td style="vertical-align: middle;">
+                <strong style="font-size: 14pt; color: #1e293b;">Kowsik Y</strong><br />
+                <span style="color: #64748b; font-size: 11pt; font-family: monospace;">NLBIT25014</span>
+                <br />
+                <span style="color: #64748b; font-size: 11pt; font-family: monospace;">
+                    7376232AL145</span>
+                <br />
+                <span style="color: #64748b; font-size: 11pt; font-family: monospace;">Set - 2</span>
+            </td>
+        </tr>
+    </table>
+
+
+    <h2>1. Problem Statement</h2>
+    <div>
+        <p style="margin-top: 0;">A rapidly growing technology company receives customer requests through voice calls,
+            chat, emails, and web portals. Customers ask about product features, pricing, subscriptions,
+            troubleshooting, warranty, order status, account issues, and service requests.</p>
+        <p>The company wants to build a unified AI-powered Customer Success Platform that serves as the first point of
+            contact for customers. The platform intelligently understands customer requests, gathers missing information
+            through conversation, retrieves relevant organizational knowledge, determines the appropriate course of
+            action, and completes tasks whenever possible. If sufficient information is unavailable or the request
+            involves sensitive business operations, the system recognizes its limitations and seamlessly transfers the
+            conversation to a human support representative.</p>
+        <p>Customers often ask follow-up questions, interrupt conversations, change topics midway, and switch between
+            voice and text interactions. The assistant maintains conversational context while providing fast, reliable,
+            and professional responses.</p>
+        <p>The organization expects the solution to improve customer experience without compromising security, accuracy,
+            or business policies. The system is designed to handle real-world ambiguity, conflicting information, and
+            incomplete customer inputs while remaining scalable for thousands of concurrent users.</p>
+        <p style="margin-bottom: 0;"><strong>Objective &amp; Mission:</strong> To design and develop an industry-ready
+            AI platform capable of delivering intelligent customer assistance by making appropriate architectural
+            decisions, effectively utilizing AI technologies, and ensuring a production-quality user experience.</p>
+    </div>
+    <h3>1.2 Project Overview &amp; Purpose</h3>
+    <p>The <strong>Intelligent Customer Success &amp; Service Automation Platform</strong> is an advanced, omnichannel
+        enterprise customer engagement solution designed to unify real-time browser-based web support, streaming
+        conversational voice interactions, resilient business process orchestration, and human-in-the-loop escalation
+        into a single, cohesive ecosystem. Built as a polyglot system, the platform bridges the gap between
+        conversational artificial intelligence and deterministic enterprise workflow execution.</p>
+    <h3>1.3 The Real-World Problem Answered</h3>
+    <p>Modern enterprise customer service operations frequently suffer from organizational and technological
+        fragmentation. Traditional chat systems rely on rigid decision trees that frustrate users, while standalone LLM
+        conversational agents lack secure, transactional connectivity to core business databases and workflow systems.
+        Furthermore, integrating low-latency conversational audio streaming alongside asynchronous human agent
+        intervention presents severe concurrency, state consistency, and security challenges.</p>
+    <p>This platform solves these systemic friction points by implementing an architecture where conversational AI
+        handles fluid natural language reasoning and retrieval, while deterministic workflow engines manage business
+        state transactions, retry logic, and compliance approvals.</p>
+    <h3>1.4 Target Audience Breakdown &amp; Benefits</h3>
+    <ul>
+        <li><strong>For Non-Technical Stakeholders &amp; Business Leaders:</strong><br />
+            The system automates high-volume customer inquiries across text and voice channels without human
+            intervention, drastically lowering support operating costs. When complex requests arise (e.g., high-value
+            warranty replacements or refunds exceeding policy limits), the platform automatically escalates to a human
+            support agent with complete conversational context, sentiment evaluation, and fraud risk scoring, ensuring
+            zero customer repeat-explanation and guaranteed policy compliance.</li>
+        <li><strong>For Software Engineers &amp; Solution Architects:</strong><br />
+            The project implements a well-bounded polyglot architecture utilizing TypeScript (Next.js/NestJS) for
+            I/O-bound web traffic and API gateways, Python for compute-heavy AI/ML audio processing and LLM graph
+            orchestration, and Temporal for resilient distributed workflows. Clean schema isolation via PostgreSQL
+            domain namespaces, OpenTelemetry distributed tracing, and specialized security shields ensure extensibility,
+            testability, and operational safety.</li>
+    </ul>
+    <hr />
+    <h2>2. Architectural Style &amp; Core Design Decisions</h2>
+    <h3>2.1 Primary Architecture Style: Polyglot Modular Monolith &amp; Specialized Microservices</h3>
+    <p>The system deliberately eschews both monolithic entanglement and premature microservice sprawl. Derived from
+        exhaustive engineering analyses documented in our Architectural Decision Records (ADRs), the platform adopts a
+        <strong>Polyglot Hybrid Architecture</strong>:
+    </p>
+    <ol>
+        <li><strong>Modular Domain Monolith for Core Business Logic:</strong><br />
+            The primary data-processing application is implemented as a modular core service built on NestJS and
+            Fastify. Rather than deploying dozens of separate chat, case, and policy microservices—which introduce
+            network overhead and complex distributed transactions—the core domain is cleanly bounded by logical schema
+            separation inside PostgreSQL (<code>customer</code>, <code>conversation</code>,
+            <code>case_management</code>, <code>policy</code>, <code>audit</code>).
+        </li>
+        <li><strong>Specialized Domain Microservices for Heterogeneous Workloads:</strong><br />
+            Services exhibiting divergent computational requirements, scaling metrics, or linguistic ecosystems are
+            completely decoupled into dedicated microservices communicating over standardized interfaces:
+            <ul>
+                <li><strong>AI Orchestrator Service:</strong> Built in Python 3.12 with FastAPI and LangGraph to
+                    leverage the dominant AI/ML dependency ecosystem and handle non-linear stateful conversational
+                    graphs.</li>
+                <li><strong>Voice Service:</strong> Built in Python to manage persistent bi-directional binary WebSocket
+                    streams (<code>pcm_s16le</code> at 16kHz) and real-time inference (Faster-Whisper STT and TTS
+                    synthesis) without blocking general web gateway worker threads.</li>
+                <li><strong>Durable Workflow Worker:</strong> Built on the Temporal SDK to handle long-running,
+                    asynchronous background processes (e.g., multi-day refund review approvals) that survive service
+                    restarts and system failures without losing transaction state.</li>
+            </ul>
+        </li>
+    </ol>
+    <h3>2.2 Summary of Foundational Architectural Decision Records (ADRs)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">ADR Identifier</th>
+                <th style="text-align:left">Engineering Decision</th>
+                <th style="text-align:left">Rationale &amp; Enterprise Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left"><strong>ADR 0001</strong></td>
+                <td style="text-align:left"><strong>Next.js as BFF, Not Sole Gateway</strong></td>
+                <td style="text-align:left">Utilizes Next.js Route Handlers strictly as a Backend-for-Frontend (BFF)
+                    session coordination layer for browser clients, while maintaining independent microservice port
+                    routing and API gateways for uniform external rate limiting, authentication, and partner hooks.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>ADR 0002</strong></td>
+                <td style="text-align:left"><strong>LangGraph for AI Flow, Temporal for Workflows</strong></td>
+                <td style="text-align:left">Separates probabilistic AI conversation logic from deterministic business
+                    transactions. LangGraph manages dialogue state, retrieval evaluation, and tool proposals; Temporal
+                    enforces retry policies, database commits, timers, and supervisor approvals.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>ADR 0003</strong></td>
+                <td style="text-align:left"><strong>Binary PCM WebSocket for Voice MVP</strong></td>
+                <td style="text-align:left">Leverages browser <code>AudioWorklet</code> streaming via raw PCM binary
+                    frames over WebSockets rather than heavyweight telephony protocols, achieving minimal latency,
+                    simple debugging, and direct interfacing with audio processing engines.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>ADR 0004</strong></td>
+                <td style="text-align:left"><strong>Modular Core Before Microservice Splitting</strong></td>
+                <td style="text-align:left">Consolidates related enterprise entity management within a cohesive NestJS
+                    Core API, preventing distributed transaction complexity during initial scaling while preserving
+                    explicit database interfaces for future service extraction.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h2>3. Overall System Architecture &amp; Topology</h2>
+    <div class="mermaid">graph TD
+        %% Frontend Experience Layer
+        subgraph Frontend [Frontend Experience Portals - Next.js 15]
+        CustomerWeb[Customer Web Portal&lt;br/&gt;Port 3000]
+        AgentConsole[Agent Command Center&lt;br/&gt;Port 3001]
+        AdminConsole[Admin Management Portal&lt;br/&gt;Port 3002]
+        end
+
+        %% Edge &amp; Gateway Layer
+        subgraph Services [Backend Microservices Ecosystem]
+        CoreAPI[Core Business API Gateway&lt;br/&gt;NestJS / Fastify — Port 8000]
+        Orchestrator[AI Orchestrator Engine&lt;br/&gt;FastAPI / LangGraph — Port 8002]
+        VoiceService[Voice &amp; Speech Engine&lt;br/&gt;FastAPI / Faster-Whisper — Port 8004]
+        WorkflowWorker[Durable Workflow Engine&lt;br/&gt;Temporal Worker — Port 8006]
+        Integration[CRM &amp; ERP Integration Adapter&lt;br/&gt;NestJS — Port 8003]
+        Notification[Transactional Notification Service&lt;br/&gt;NestJS — Port 8005]
+        end
+
+        %% Storage &amp; Infrastructure
+        subgraph Storage [Persistence &amp; Distributed Coordination]
+        PostgreSQL[(PostgreSQL + pgvector&lt;br/&gt;Port 5433 / 7 Schemas)]
+        Redis[(Redis Cache &amp; Pub/Sub&lt;br/&gt;Port 6380)]
+        NATS[NATS JetStream Broker&lt;br/&gt;Port 4222 / 8222]
+        TemporalServer[(Temporal Execution Server&lt;br/&gt;Port 7233 / 8088)]
+        MinIO[(MinIO Object Blob Store&lt;br/&gt;Port 9000)]
+        end
+
+        %% Interactions &amp; Traffic Routing
+        CustomerWeb --&gt;|REST &amp; SSE Streams| CoreAPI
+        CustomerWeb --&gt;|WebSocket Binary PCM| VoiceService
+        AgentConsole --&gt;|REST Queries &amp; Signal Actions| CoreAPI
+        AdminConsole --&gt;|Policy Management REST| CoreAPI
+
+        CoreAPI --&gt;|Drizzle ORM Queries| PostgreSQL
+        CoreAPI --&gt;|Pub/Sub &amp; Cache| Redis
+        CoreAPI --&gt;|Initiate &amp; Signal Workflows| TemporalServer
+
+        VoiceService --&gt;|Session Audio &amp; Turn Metadata| Orchestrator
+        Orchestrator --&gt;|Policy-Gated Tool Calls| Integration
+        Orchestrator --&gt;|Vector Similarity Retrieval| PostgreSQL
+
+        WorkflowWorker --&gt;|Poll &amp; Execute Transactions| TemporalServer
+        WorkflowWorker --&gt;|Publish Domain Events| NATS
+        WorkflowWorker --&gt;|Dispatch Idempotent Messages| Notification
+    </div>
+    <p><em>Diagram Explanation: The architecture separates browser user interface portals from microservice execution
+            gateways and persistent backend databases. Client applications interact either via REST and HTTP Server-Sent
+            Events for chat, or persistent WebSockets for live voice audio. Business state is secured within PostgreSQL
+            across isolated schemas, while long-running operations are routed through Temporal and NATS JetStream.</em>
+    </p>
+    <hr />
+    <h2>4. Repository &amp; Module Organization</h2>
+    <p>The project is governed as a unified polyglot monorepo utilizing <strong>pnpm workspaces</strong>,
+        <strong>Turborepo</strong> task orchestration, and isolated Python virtual environments (<code>.venv</code>).
+        This enforces unified architectural linting, unified continuous integration testing, and reusable code libraries
+        without publishing artifacts to external package registries.
+    </p>
+    <pre><code class="language-text">├── apps/                        # Next.js 15 Web Portals (Frontend Layer)
+│   ├── customer-web/            # Client interface for live web support chat &amp; microphone audio streaming
+│   ├── agent-console/           # Real-time human support agent triage, supervisor approvals, &amp; ticket actions
+│   └── admin-console/           # Platform governance, LLM model configuration, and policy monitoring
+├── services/                    # Autonomous Domain &amp; Computational Microservices
+│   ├── core-api/                # Primary NestJS/Fastify domain gateway and PostgreSQL database schema authority
+│   ├── ai-orchestrator/         # Python FastAPI service executing stateful LangGraph conversation workflows
+│   ├── voice-service/           # Python bi-directional audio WebSocket server with VAD, STT, and TTS engines
+│   ├── workflow-worker/         # Temporal TypeScript worker executing resilient, multi-step business transactions
+│   ├── integration-service/     # Canonical NestJS adapter unifying external CRM, ERP, and order platforms
+│   ├── notification-service/    # Idempotent transactional email and SMS messaging gateway
+│   └── knowledge-service/       # Specialized retrieval microservice scheduled for enterprise vector embedding management
+├── packages/                    # Shared TypeScript Enterprise Modules
+│   ├── contracts/               # Shared Zod schemas, data transmission objects (DTOs), and domain TypeScript interfaces
+│   ├── events/                  # Standardized event definitions and NATS pub/sub message contracts
+│   ├── auth/                    # Distributed JWT verification, session management, and RBAC authorization guards
+│   ├── observability/           # OpenTelemetry correlation propagation, Prometheus metric exporters, and PII redactors
+│   └── ui/                      # Responsive design system tokens, glassmorphic UI components, and Tailwind styling
+├── python-packages/             # Shared Python Domain Libraries
+│   ├── ai-contracts/            # Pydantic serialization schemas matching TypeScript contracts for AI data exchange
+│   ├── ai-observability/        # Python OpenTelemetry tracers and specialized prompt/response latency profiling
+│   ├── service-auth/            # Inter-service authentication validation and secure API key middleware for FastAPI
+│   └── rag-core/                # pgvector indexing utilities, chunking algorithms, and embedding connectors
+└── infrastructure/              # Container infrastructure manifests, database initialization SQL, and monitoring rules
+</code></pre>
+    <hr />
+    <h2>5. End-to-End System Workflow &amp; Request Lifecycle</h2>
+    <p>When a customer initiates an interaction on the platform, information moves through a well-defined sequence of
+        architectural boundaries. The lifecycle differs significantly between text-based chat inquiries and live voice
+        conversations.</p>
+    <div class="mermaid">sequenceDiagram
+        autonumber
+        actor Customer as Customer (Web Portal)
+        participant Core as Core Business API
+        participant Orch as AI Orchestrator
+        participant PG as PostgreSQL / pgvector
+        participant Temporal as Temporal Worker
+        actor Agent as Human Agent Console
+
+        Customer-&gt;&gt;Core: POST /api/conversations/chat (Message + Correlation ID)
+        Core-&gt;&gt;Core: Validate Token &amp; Redact PII
+        Core-&gt;&gt;PG: Insert Message Record (schema: conversation)
+        Core-&gt;&gt;Orch: Relay Chat Turn &amp; Context
+        Orch-&gt;&gt;Orch: Evaluate AI Shield (Prompt Injection / Jailbreak Guard)
+        Orch-&gt;&gt;PG: Query Vector Similarity for Policy RAG
+        Orch-&gt;&gt;Orch: Execute LangGraph Conversational State Engine
+        alt Action Required: Trigger Business Process
+        Orch-&gt;&gt;Core: Propose Tool Execution (e.g., Request Warranty Refund)
+        Core-&gt;&gt;Temporal: Start WarrantyClaimWorkflow
+        Temporal-&gt;&gt;PG: Update Case Status -&gt; &quot;Waiting Approval&quot;
+        Temporal--&gt;&gt;Agent: Signal Supervisor Escalation Queue
+        Agent-&gt;&gt;Core: Approve Warranty Replacement
+        Core-&gt;&gt;Temporal: Dispatch Approval Signal
+        Temporal-&gt;&gt;Core: Finalize Transaction &amp; Notify Customer
+        else Standard Informational Turn
+        Orch--&gt;&gt;Core: Return Grounded Response + Citations
+        Core--&gt;&gt;Customer: Stream Tokens via Server-Sent Events (SSE)
+        end
+    </div>
+    <p><em>Diagram Explanation: The sequence demonstrates the transactional boundary between probabilistic chat
+            reasoning and deterministic business actions. Notice that the AI Orchestrator never mutates production
+            database rows or issues financial refunds directly; instead, it generates structured tool proposals that are
+            validated by the Core API and reliably executed via Temporal workflows.</em></p>
+    <h3>5.1 Step-by-Step Request Lifecycle Breakdown</h3>
+    <ol>
+        <li><strong>Edge Ingestion &amp; Validation:</strong><br />
+            Requests from browser applications arrive at the Next.js BFF and are routed to the Core API. Requests
+            undergo immediate bearer token authentication, payload schema validation via Zod, and correlation ID
+            assignment for distributed observability.</li>
+        <li><strong>Security Scrubbing &amp; Pre-Processing:</strong><br />
+            The logging interceptor evaluates payloads against regex-based PII redaction rules, instantly masking credit
+            card figures, social security numbers, and bank details from telemetry streams.</li>
+        <li><strong>Dialogue Reasoning &amp; Intent Classification:</strong><br />
+            The chat turn is dispatched to the AI Orchestrator. The engine checks the prompt against an adversarial
+            attack filter (AI Security Shield). Once verified safe, intent classifiers determine whether the customer
+            seeks simple answers, order status updates, or complex warranty dispute interventions.</li>
+        <li><strong>Knowledge Grounding (RAG):</strong><br />
+            For informational queries, vector embeddings are generated and compared against pre-computed enterprise
+            policy documents stored in PostgreSQL <code>pgvector</code>. Matched passages are supplied as strict domain
+            context to the inference engine to eliminate hallucination.</li>
+        <li><strong>Deterministic Process Hand-off (When Applicable):</strong><br />
+            If the conversation necessitates mutating enterprise state (such as initiating a product return), LangGraph
+            suspends the dialog loop and submits a validated invocation payload to the Core API. The Core API initiates
+            a Temporal durable workflow, guaranteeing execution even in the event of temporary infrastructure failures.
+        </li>
+        <li><strong>Asynchronous Response Delivery:</strong><br />
+            Responses return to the browser client asynchronously. For chat interfaces, textual responses stream
+            character-by-character over HTTP Server-Sent Events (SSE). For voice sessions, generated text is converted
+            to streaming PCM frames delivered directly over active WebSockets.</li>
+    </ol>
+    <hr />
+    <h2>6. Service Communication &amp; Interaction Model</h2>
+    <p>The platform utilizes a structured hybrid communication strategy, selecting specific network transport protocols
+        tailored to operational elasticity and latency tolerances.</p>
+    <div class="mermaid">graph LR
+        subgraph Synchronous Traffic
+        C[Client Web App] == HTTP REST / SSE ==&gt; CA[Core Business API]
+        CA == RPC / HTTP ==&gt; AI[AI Orchestrator]
+        end
+
+        subgraph Streaming Media
+        C2[Microphone Capture] == WebSocket PCM 16kHz ==o VS[Voice Service]
+        end
+
+        subgraph Asynchronous Eventing &amp; Workflows
+        TW[Workflow Worker] -. Publishes Domain Events .-&gt; NATS[NATS JetStream]
+        NATS -. Subscribers .-&gt; NS[Notification Service]
+        NATS -. Subscribers .-&gt; IS[Integration Service]
+        CA -- Signals &amp; Timers --&gt; TS[Temporal Server]
+        end
+    </div>
+    <p><em>Diagram Explanation: Communication paradigms are partitioned by operational requirements. Frontends use REST
+            and SSE for standard API interactions, raw binary WebSockets for continuous voice audio streaming, and
+            decoupled asynchronous messaging via NATS and Temporal for resilient background execution.</em></p>
+    <h3>6.1 Inter-Service Communication Matrix</h3>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">Transport Mechanism</th>
+                <th style="text-align:left">Primary Consumers</th>
+                <th style="text-align:left">Architectural Rationale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left"><strong>HTTP REST &amp; Server-Sent Events (SSE)</strong></td>
+                <td style="text-align:left">Customer Portal ↔ Core API, Core API ↔ AI Orchestrator</td>
+                <td style="text-align:left">Delivers low-overhead REST CRUD operations and progressive streaming text
+                    generation without open-ended bi-directional websocket memory consumption.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Binary WebSocket (<code>pcm_s16le</code>, 16kHz)</strong></td>
+                <td style="text-align:left">Browser AudioWorklet ↔ Voice Service</td>
+                <td style="text-align:left">Enables low-latency, full-duplex transmission of uncompressed audio frames,
+                    vital for real-time speech-to-text transcription and instant barge-in interruption.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>NATS JetStream (Async Pub/Sub)</strong></td>
+                <td style="text-align:left">Workflow Worker, Notification Service, Integration Service</td>
+                <td style="text-align:left">De-couples high-volume background domain events (<code>OrderShipped</code>,
+                    <code>RefundApproved</code>) with guaranteed at-least-once message delivery and persistent event
+                    replication.
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Temporal SDK RPC Protocols</strong></td>
+                <td style="text-align:left">Core API ↔ Temporal Server ↔ Workflow Workers</td>
+                <td style="text-align:left">Enforces strict saga management and distributed state machines with
+                    persistent execution logs and automatic disaster recovery retries.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h2>7. Data Flow &amp; Storage Architecture</h2>
+    <p>The platform avoids unified monolithic database tables in favor of strict domain partitioning within PostgreSQL,
+        supplemented by rapid in-memory key-value caching and scalable binary object storage.</p>
+    <div class="mermaid">erDiagram
+        CUSTOMER ||--o{ CONVERSATION : initiates
+        CUSTOMER ||--o{ CASE : owns
+        CONVERSATION ||--o{ MESSAGE : contains
+        CONVERSATION ||--o{ TURN : segments
+        CONVERSATION ||--o{ CASE : references
+        CASE ||--o{ ESCALATION : triggers
+        CASE ||--o{ WORKFLOW_REFERENCE : executes
+
+        CUSTOMER {
+        string id PK
+        string email
+        int authentication_level
+        jsonb metadata
+        }
+        CONVERSATION {
+        string id PK
+        string customer_id FK
+        string status
+        string channel
+        string active_intent
+        }
+        MESSAGE {
+        string id PK
+        string conversation_id FK
+        string role
+        string content
+        timestamp created_at
+        }
+        CASE {
+        string id PK
+        string customer_id FK
+        string conversation_id FK
+        string status
+        string priority
+        }
+    </div>
+    <p><em>Diagram Explanation: Entity relationships highlight strict foreign-key integrity between customer identities,
+            conversational dialogue records, and durable case tickets. Drizzle ORM enforces these relational contracts
+            across bounded schema namespaces.</em></p>
+    <h3>7.1 PostgreSQL Schema Namespaces</h3>
+    <p>The primary database instance is structured into seven isolated relational namespaces to prevent unauthorized
+        cross-domain data mutations and facilitate future microservice decomposition:</p>
+    <ul>
+        <li><strong><code>customer</code> Schema:</strong> Manages core end-user identities, authentication levels,
+            localized preferences, and custom profile metadata.</li>
+        <li><strong><code>conversation</code> Schema:</strong> Records interactive sessions, storing individual message
+            turns, speaker roles (user, agent, assistant), sentiment tags, and intent labels.</li>
+        <li><strong><code>case_management</code> Schema:</strong> Maintains support tickets, escalation trigger
+            justifications, priority levels, and human agent task assignments.</li>
+        <li><strong><code>policy</code> Schema:</strong> Contains organizational rules, product warranty constraints,
+            and multi-dimensional vector embeddings for conversational retrieval.</li>
+        <li><strong><code>audit</code> Schema:</strong> Functions as an append-only cryptographic transaction log
+            tracking administrative overrides, AI tool execution proposals, and policy mutations.</li>
+        <li><strong><code>workflow_reference</code> Schema:</strong> Binds Temporal workflow execution identifiers to
+            business case entities for seamless UI state tracking.</li>
+        <li><strong><code>notification</code> Schema:</strong> Logs outgoing transactional communication delivery
+            states, retry counts, and customer interaction receipts.</li>
+    </ul>
+    <hr />
+    <h2>8. Business Logic &amp; Durable Workflow Automation</h2>
+    <p>A foundational engineering pillar of this project is the delegation of multi-step business transactions to
+        <strong>Temporal</strong>, ensuring resilient state progression that outlives application crashes, networking
+        failures, or external service downtime.
+    </p>
+    <div class="mermaid">stateDiagram-v2
+        [*] --&gt; Submitted: Customer Proposes Return
+        Submitted --&gt; AutomatedCheck: Workflow Worker Initiated
+        AutomatedCheck --&gt; Approved: Under Dollar Limit ($100) &amp; In Policy
+        AutomatedCheck --&gt; SupervisorTriage: Exceeds Limit or Suspicious Sentiment
+
+        state SupervisorTriage {
+        [*] --&gt; InQueue
+        InQueue --&gt; AgentReviewing: Agent Claims Case
+        AgentReviewing --&gt; DecisionSignal: Approve or Reject Signal Sent
+        }
+
+        SupervisorTriage --&gt; Approved: Supervisor Approved Signal
+        SupervisorTriage --&gt; Rejected: Supervisor Rejected Signal
+
+        Approved --&gt; Execution: Dispatch Notification &amp; Integration Call
+        Rejected --&gt; Execution: Notify Customer of Denial Reasons
+        Execution --&gt; [*]: Workflow Complete
+    </div>
+    <p><em>Diagram Explanation: The state machine illustrates the resilient execution path of a Warranty Claim Workflow.
+            If business validation requires human approval, Temporal suspends worker thread execution—consuming zero
+            active CPU resources—and sets a durable timer while waiting for an external signal from the human Agent
+            Console.</em></p>
+    <h3>8.1 Implemented Resilient Workflows</h3>
+    <ol>
+        <li><strong>Warranty Claim Workflow (<code>WarrantyClaimWorkflow</code>):</strong><br />
+            Evaluates customer return requests against hardware policy timelines. If the claimed item value falls below
+            an automated confidence threshold ($100) and invoice verification succeeds via the Integration Service, the
+            workflow instantly authorizes replacement shipping and notifies the customer. If validation criteria fail,
+            it generates an escalation entity in the <code>case_management</code> schema and pauses execution pending
+            human agent review.</li>
+        <li><strong>Refund Review Workflow (<code>RefundReviewWorkflow</code>):</strong><br />
+            Orchestrates high-value financial refunds. Enforces a strict Human-in-the-Loop requirement, requiring an
+            agent to execute an explicit cryptographic approval signal via the Agent Console before transactional
+            settlement commands are dispatched to integration adapters.</li>
+        <li><strong>Order Processing Workflow (<code>OrderProcessingWorkflow</code>):</strong><br />
+            Monitors shipment tracking data, handling automated notification dispatch when delivery dates shift or
+            logistics carriers report fulfillment exceptions.</li>
+    </ol>
+    <hr />
+    <h2>9. AI &amp; Real-Time Voice Streaming Architecture</h2>
+    <h3>9.1 AI Orchestrator &amp; Conversational State Machine (LangGraph)</h3>
+    <p>The AI engine transforms conversational turns from stateless, reactive completion calls into structured,
+        multi-step dialogue graphs capable of handling complex customer service operations.</p>
+    <div class="mermaid">graph TD
+        Input[Incoming Dialogue Turn] --&gt; Shield[AI Security Shield Validation]
+        Shield --&gt;|Payload Malicious| Block[Return HTTP 400/429 &amp; Audit Alarm]
+        Shield --&gt;|Payload Valid| Intent[Intent Classification Node]
+
+        Intent --&gt;|Informational Query| RAG[Retrieve Vector Policy Embeddings]
+        RAG --&gt; Synth[Synthesize Grounded Response]
+
+        Intent --&gt;|Transactional Action| CheckParams{All Required Parameters Present?}
+        CheckParams --&gt;|No: Missing Info| Loop[Generate Missing Parameter Follow-Up Question]
+        CheckParams --&gt;|Yes: Complete| Propose[Generate Tool Execution Proposal]
+
+        Synth --&gt; Output[Stream Response to Gateway]
+        Loop --&gt; Output
+        Propose --&gt; CoreAuthorize[Submit Proposal to Core API for Verification]
+    </div>
+    <p><em>Diagram Explanation: The LangGraph processing sequence ensures safety and parameter completeness. Before
+            invoking external enterprise tools, the engine evaluates whether required arguments (e.g., Order Number,
+            Serial ID) are present; if incomplete, it loops back to interrogate the user without executing premature
+            backend transactions.</em></p>
+    <h3>9.2 Real-Time Voice Streaming Engine (Voice Service)</h3>
+    <p>The platform delivers seamless voice conversations without relying on legacy telephony hardware by implementing a
+        bi-directional streaming pipeline built on Python and continuous web sockets.</p>
+    <div class="mermaid">sequenceDiagram
+        autonumber
+        participant Browser as Client AudioWorklet
+        participant WS as Voice Service WebSocket
+        participant VAD as RMS / Energy VAD Engine
+        participant STT as Faster-Whisper Transcription
+        participant TTS as Sentence-Level TTS Engine
+
+        Note over Browser,WS: Open Bi-Directional WebSocket (pcm_s16le, 16kHz)
+        loop Continuous Microphone Stream
+        Browser-&gt;&gt;WS: Send Raw Binary Audio Packets (20ms frames)
+        WS-&gt;&gt;VAD: Evaluate Energy &amp; RMS Thresholds
+        alt Speech Detected
+        VAD-&gt;&gt;VAD: Buffer Active Speech Packets
+        else Silence Threshold Crossed
+        VAD-&gt;&gt;STT: Flush Buffered Speech Audio for Transcription
+        STT--&gt;&gt;WS: Return Transcribed Text (&quot;Check my order status&quot;)
+        WS-&gt;&gt;TTS: Stream Sentence Tokens to TTS Engine
+        TTS--&gt;&gt;Browser: Push Synthesized PCM Audio Packets
+        end
+        end
+        Note over Browser,TTS: Barge-In Event Handling
+        Browser-&gt;&gt;WS: Customer Speaks During Active TTS Playback
+        WS-&gt;&gt;VAD: Immediate Active Speech Trigger
+        WS-&gt;&gt;TTS: Abort Active TTS Generation Loop &amp; Discard Audio Buffer
+        WS--&gt;&gt;Browser: Send Control Message: Stop Client Speaker Playback
+    </div>
+    <p><em>Diagram Explanation: The voice engine processes continuous 16kHz audio streams in real time. When Voice
+            Activity Detection (VAD) identifies active customer speech during audio response playback, the server
+            instigates an immediate &quot;barge-in&quot; interruption, truncating TTS output and ensuring rapid
+            conversational responsiveness.</em></p>
+    <hr />
+    <h2>10. API Gateway &amp; Microservice Endpoint Reference</h2>
+    <p>The system surfaces clean, domain-driven API boundaries. Below is an exhaustive structural table characterizing
+        the major network ingress interfaces across active platform services:</p>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">Service Boundary</th>
+                <th style="text-align:left">Port</th>
+                <th style="text-align:left">Endpoint Path</th>
+                <th style="text-align:left">Method</th>
+                <th style="text-align:left">Authentication &amp; Validation</th>
+                <th style="text-align:left">Architectural Responsibility</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left"><strong>Core Business API</strong></td>
+                <td style="text-align:left">8000</td>
+                <td style="text-align:left"><code>/api/v1/conversations/chat</code></td>
+                <td style="text-align:left"><code>POST</code></td>
+                <td style="text-align:left">Bearer Token, Zod DTO Schema</td>
+                <td style="text-align:left">Receives chat messages, executes PII masking, inserts database conversation
+                    turns, and relays context to AI Orchestrator.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Core Business API</strong></td>
+                <td style="text-align:left">8000</td>
+                <td style="text-align:left"><code>/api/v1/cases/:id/escalation</code></td>
+                <td style="text-align:left"><code>GET</code> / <code>POST</code></td>
+                <td style="text-align:left">Agent RBAC Token, Zod Schema</td>
+                <td style="text-align:left">Retrieves escalated customer cases or initiates supervisory workflow signal
+                    override events.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>AI Orchestrator</strong></td>
+                <td style="text-align:left">8002</td>
+                <td style="text-align:left"><code>/v1/orchestration/turn</code></td>
+                <td style="text-align:left"><code>POST</code></td>
+                <td style="text-align:left">Service-to-Service Secret, Pydantic</td>
+                <td style="text-align:left">Executes stateful LangGraph conversation transitions, intent matching, RAG
+                    document evaluation, and tool proposals.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Voice Service</strong></td>
+                <td style="text-align:left">8004</td>
+                <td style="text-align:left"><code>/v1/voice/stream</code></td>
+                <td style="text-align:left"><code>WS</code></td>
+                <td style="text-align:left">Session JWT Handshake over HTTP Upgrade</td>
+                <td style="text-align:left">Opens raw bi-directional websocket connection for uncompressed 16kHz PCM
+                    audio streaming, VAD, STT, and TTS.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Integration Adapter</strong></td>
+                <td style="text-align:left">8003</td>
+                <td style="text-align:left"><code>/api/v1/adapters/orders/:id</code></td>
+                <td style="text-align:left"><code>GET</code> / <code>PUT</code></td>
+                <td style="text-align:left">Service Secret, Zod Validation</td>
+                <td style="text-align:left">Retrieves canonical fulfillment data or dispatches enterprise ERP ledger
+                    modification commands.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Notification Engine</strong></td>
+                <td style="text-align:left">8005</td>
+                <td style="text-align:left"><code>/api/v1/dispatch/template</code></td>
+                <td style="text-align:left"><code>POST</code></td>
+                <td style="text-align:left">NATS Internal Messaging Contract</td>
+                <td style="text-align:left">Triggers idempotent customer communications (email/SMS) with automated
+                    failure retry policies.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Knowledge Service</strong></td>
+                <td style="text-align:left">8001</td>
+                <td style="text-align:left"><code>/health/live</code> / <code>ready</code></td>
+                <td style="text-align:left"><code>GET</code></td>
+                <td style="text-align:left">Open Telemetry Probes</td>
+                <td style="text-align:left">Exposes Kubernetes liveness and database readiness probes for vector
+                    indexing deployment monitoring.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h2>11. Security, Privacy &amp; Observability Shield</h2>
+    <p>Security and telemetry are woven directly into inter-service middleware rather than added as an afterthought.</p>
+    <div class="mermaid">graph TD
+        subgraph SecurityDefense [Security &amp; Defense Layer]
+        Req[&quot;Incoming API / Voice Payload&quot;] --&gt; Redact[&quot;Regex PII Redaction Engine&quot;]
+        Redact --&gt; Shield[&quot;AI Prompt Injection &amp; Jailbreak Shield&quot;]
+        Shield --&gt;|Violation Detected| Reject[&quot;Abort Request &amp; Log Security Alarm&quot;]
+        Shield --&gt;|Verified Safe| Execute[&quot;Allow Processing&quot;]
+        end
+
+        subgraph ObservabilityPipeline [Observability &amp; Telemetry Pipeline]
+        Execute --&gt; Telemetry[&quot;OpenTelemetry Tracer Middleware&quot;]
+        Telemetry --&gt;|OTLP gRPC 4317| Collector[&quot;OTel Collector Contrib&quot;]
+        Collector --&gt;|Scraped via 9090| Prom[&quot;Prometheus Metrics Engine&quot;]
+        Collector --&gt;|Structured JSON| Logs[&quot;Interactive Color-Coded Log Runner&quot;]
+        end
+    </div>
+    <p><em>Diagram Explanation: Security interception occurs prior to execution logic. Payloads are cleansed of
+            personally identifiable information and scrutinized for AI attacks before execution spans are serialized by
+            OpenTelemetry and exported to Prometheus monitoring instances.</em></p>
+    <h3>11.1 Implemented Defense Mechanisms</h3>
+    <ul>
+        <li><strong>AI Security Shield:</strong><br />
+            Located inside the AI Orchestrator middleware (<code>security.py</code>), this subsystem intercepts every
+            text conversation turn and transcribed voice input. It uses heuristic analysis and boundary semantics to
+            identify adversarial prompt injection, jailbreak attempts, and instruction override attacks, terminating
+            malicious sessions instantly with protective HTTP 400/429 status codes.</li>
+        <li><strong>Automated PII Redaction Engine:</strong><br />
+            Configured across shared Node.js (<code>packages/observability</code>) and Python
+            (<code>python-packages/ai-observability</code>) libraries, explicit regex parsers scan all outbound
+            application log strings and telemetry attributes, masking Social Security numbers, credit card sequences,
+            and sensitive banking data to ensure HIPAA/SOC-2 compliance.</li>
+        <li><strong>Distributed DDoS Rate Limiters &amp; Correlation Tracing:</strong><br />
+            Sliding-window algorithms limit ingress request volume across external routing gates. Every inbound request
+            receives a globally unique <code>X-Correlation-ID</code> header that persists across synchronous REST
+            boundaries, NATS message headers, and Temporal workflow payloads, guaranteeing unified distributed tracing.
+        </li>
+    </ul>
+    <hr />
+    <h2>12. External Third-Party Integrations</h2>
+    <p>The repository relies on specific enterprise platform integrations to achieve inference capabilities and business
+        automation:</p>
+    <ul>
+        <li><strong>OpenAI &amp; Compatible LLM Inference APIs:</strong><br />
+            The AI Orchestrator integrates with remote LLM completion engines using standardized messaging protocols,
+            referencing advanced enterprise models (<code>gemini-2.5-flash</code>, <code>gpt-4o-mini-tts</code>, and
+            <code>gpt-4.1-nano</code>) for rapid intent classification, textual generation, and sentence synthesis.
+        </li>
+        <li><strong>Temporal Cloud / Distributed Execution Engine:</strong><br />
+            Establishes durable gRPC connections to local Temporal containers (or managed cloud clusters) to serialize
+            transactional workflow history and orchestrate fault-tolerant worker execution schedules.</li>
+        <li><strong>Canonical Enterprise CRM &amp; ERP Adapters:</strong><br />
+            The Integration Service implements canonical data transformation contracts designed to communicate with
+            external shipping logistics providers and merchant order databases without coupling internal schemas to
+            vendor-specific APIs.</li>
+    </ul>
+    <hr />
+    <h2>13. Categorized Technology Stack</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align:left">Architecture Domain</th>
+                <th style="text-align:left">Technology Implementations &amp; Specifications</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align:left"><strong>Frontend Web Layer</strong></td>
+                <td style="text-align:left">Next.js 15 (App Router), React 19, TypeScript 5.7, Tailwind CSS,
+                    Glassmorphism UI Components, Browser <code>AudioWorklet</code></td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Backend API Gateways</strong></td>
+                <td style="text-align:left">NestJS 10, Fastify High-Performance HTTP Adapter, Zod Input Validator,
+                    OpenAPI / Swagger Automated Docs</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>AI &amp; Conversational Core</strong></td>
+                <td style="text-align:left">Python 3.12, FastAPI, LangGraph, LangChain, Pydantic V2, OpenAI / Gemini
+                    Compatible Completion APIs</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Real-Time Voice Engine</strong></td>
+                <td style="text-align:left">Python FastAPI WebSockets, Faster-Whisper Local STT Transcription Engine,
+                    Real-Time Sentence TTS, RMS Energy VAD</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Database &amp; Blob Storage</strong></td>
+                <td style="text-align:left">PostgreSQL 17, <code>pgvector</code> Extension for Semantic Embedding
+                    Search, Drizzle ORM, MinIO Object Storage</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Async &amp; Resilient Engines</strong></td>
+                <td style="text-align:left">Temporal SDK Worker Engine (Resilient Business Workflows), Redis 7
+                    (Caching), NATS JetStream (Message Broker)</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Telemetry &amp; Observability</strong></td>
+                <td style="text-align:left">OpenTelemetry gRPC / HTTP Exporters, Prometheus Telemetry Scraping, Regex
+                    PII Scrubbers</td>
+            </tr>
+            <tr>
+                <td style="text-align:left"><strong>Monorepo Infrastructure</strong></td>
+                <td style="text-align:left">pnpm 9 Workspaces, Turborepo 2.10.8 Task Orchestration, Docker &amp; Docker
+                    Compose, Automated Multi-Service Shell Runner (<code>run_all_services.sh</code>)</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h2>14. Verification &amp; Operational Testing Standards</h2>
+    <p>To maintain structural reliability across both TypeScript and Python language domains, the project imposes strict
+        continuous integration testing standards governed by automated monorepo execution targets:</p>
+    <ol>
+        <li><strong>TypeScript Comprehensive Quality Gates:</strong><br />
+            Executed across root, applications, and Node services via Turborepo:<br />
+            <code>pnpm test &amp;&amp; pnpm build &amp;&amp; pnpm typecheck &amp;&amp; pnpm lint</code><br />
+            Verifies Drizzle ORM structural schemas, frontend React component compilation, and contract validation
+            rules.
+        </li>
+        <li><strong>Python AI Orchestrator Suite:</strong><br />
+            Verified within isolated virtual environments using custom Python paths:<br />
+            <code>cd services/ai-orchestrator &amp;&amp; PYTHONPATH=&quot;src:../../python-packages/ai-contracts/src&quot; pytest tests -v</code><br />
+            Tests LangGraph node transitions, intent classifier accuracy, and AI Security Shield deflection thresholds.
+        </li>
+        <li><strong>Python Voice Engine Acoustic Verification:</strong><br />
+            Tested against real-time media streaming constraints:<br />
+            <code>cd services/voice-service &amp;&amp; PYTHONPATH=&quot;src:../../python-packages/ai-contracts/src&quot; pytest tests -v</code><br />
+            Validates frame packet buffering, voice activity RMS triggers, and TTS sentence streaming timing.
+        </li>
+    </ol>
+    <hr />
+
+</body>
+
+</html>

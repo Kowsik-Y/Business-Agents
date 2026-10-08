@@ -1,0 +1,11 @@
+{
+  "name": "@csp/typescript-config",
+  "version": "0.1.0",
+  "private": true,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "nestjs.json",
+    "library.json"
+  ]
+}

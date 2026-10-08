@@ -1,0 +1,150 @@
+---
+name: nextjs
+version: 2.2.0
+description: |
+  Build Next.js the way THIS project's App Router already works, with the current stable Next.js
+  16.2 line recommended for new applications and explicit compatibility handling for existing
+  versions. Carries the real server/client boundaries and conventions for pages, layouts, async
+  request APIs, the project API-client data layer, Server Actions, Cache Components, metadata,
+  i18n, accessibility, analytics, and testing. Use when a task touches this project's Next.js App
+  Router surface and should follow its conventions rather than generic or prerelease defaults.
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Grep
+argument-hint: "[Next.js page, component, route, or caching task]"
+arguments:
+  - request
+when_to_use: |
+  Use when the task touches Next.js pages, layouts, components, routing, metadata, server actions,
+  caching, i18n, logging, analytics, or tests. Examples: "build this App Router page", "fix this
+  server action", "update metadata", "wire translations", "change caching behavior". Do NOT use
+  for standalone Node or Nest backends with no Next.js surface (nodejs / nestjs), or for non-Next
+  React apps — it supplies App Router conventions, not the bug hunt, plan, or build itself.
+effort: high
+---
+
+<EXTREMELY-IMPORTANT>
+This skill is a routing shell over the Next.js reference set, not the full framework manual.
+
+Non-negotiable rules:
+1. Read `references/stack.md` first.
+2. Inspect `package.json` and the active lockfile before applying version-specific APIs. Recommend
+   the stable Next.js 16.2 line for new applications; never silently upgrade an existing project or
+   select a canary release during unrelated work.
+3. Then load only the references needed for the actual task.
+4. Keep user-visible text translated.
+5. Keep data access in the project’s API-client pattern.
+6. Keep the heavy Next.js guidance in `references/`, not inline here.
+</EXTREMELY-IMPORTANT>
+
+# nextjs
+
+## Inputs
+
+- `$request`: The Next.js page, component, routing, caching, or testing task
+
+## Goal
+
+Route Next.js work through the project's App Router conventions so implementation follows the established patterns for data access, metadata, localization, and rendering boundaries.
+
+## Step 0: Read the stack contract
+
+Always start with:
+
+- `references/stack.md`
+
+That establishes the locked decisions for runtime, config, and project-wide Next.js patterns.
+
+For a new application, version recommendation, or framework upgrade, also read:
+
+- `references/upgrading.md`
+
+**Success criteria**: The project’s Next.js architecture assumptions are explicit before editing.
+
+## Step 1: Load only the relevant references
+
+Use the routing table to pick reference files that match the task. Do not bulk-load the full reference tree.
+
+| Task | Read |
+|------|------|
+| New application, version choice, Next.js 15 to 16 upgrade | `references/upgrading.md` |
+| Folder layout, file conventions, project structure | `references/folder-structure.md` |
+| Route groups, dynamic routes, parallel/intercepting routes | `references/routing.md` |
+| Creating or editing a page or layout | `references/page-checklist.md` |
+| Component structure, client/server boundaries | `references/component-anatomy.md` |
+| Data fetching, API client, fetch wrappers | `references/api-client-pattern.md` |
+| Server actions, mutations, revalidation | `references/server-actions.md` |
+| Caching, ISR, on-demand revalidation | `references/caching-strategy.md` |
+| Translations, locale routing, message files | `references/i18n-conventions.md` |
+| Error boundaries, error.tsx, not-found.tsx | `references/error-handling.md` |
+| Structured logging, log levels | `references/logging.md` |
+| Analytics, event tracking, consent | `references/tracking.md` |
+| Authentication, middleware, session | `references/auth.md` |
+| Security headers, CSP, CSRF, rate limiting | `references/security.md` |
+| SEO, metadata, Open Graph, sitemap | `references/seo.md` |
+| Accessibility, ARIA, keyboard navigation | `references/accessibility.md` |
+| Unit tests, component tests | `references/testing-unit.md` |
+| E2E tests, Playwright | `references/testing-e2e.md` |
+| Machine-readable output, JSON-LD, structured data | `references/machine-readable.md` |
+
+Multiple tasks? Read multiple files. The references are self-contained.
+
+**Success criteria**: The active context only contains the task-relevant Next.js conventions.
+
+## Step 2: Implement with the core Next.js guardrails
+
+Keep these rules active:
+
+- async request-bound APIs are awaited
+- data access uses the project API client, not ad hoc fetches or ORM calls
+- visible strings go through the localization layer
+- pages and layouts stay server-first unless a leaf component truly needs client mode
+- metadata and SEO requirements stay attached to page work
+
+**Success criteria**: The change fits the project’s App Router architecture instead of generic framework defaults.
+
+## Step 3: Verify the affected surface
+
+Use the narrowest relevant verification:
+
+- unit tests
+- e2e tests
+- linting or type checks
+- `next typegen` when route helpers or route structure changed
+- page or route smoke validation
+
+**Success criteria**: The changed Next.js surface still behaves correctly.
+
+## Guardrails
+
+- Do not inline the whole Next.js handbook in `SKILL.md`.
+- Do not skip `references/stack.md`.
+- Do not hardcode user-facing strings when i18n is required.
+- Do not bypass the project’s API-client and caching conventions.
+- Do not apply Next.js 16-only APIs to an older project unless the task includes the upgrade.
+- Do not recommend `next@canary` or any prerelease unless the user explicitly opts into prerelease
+  testing.
+- Do not add `disable-model-invocation`; this is a normal domain skill.
+
+## When To Load References
+
+- `references/stack.md`
+  Always.
+
+- `references/upgrading.md`
+  New applications, version choices, and framework upgrades.
+
+- then only the task-relevant files under `references/`
+
+## Output Contract
+
+Report:
+
+1. the detected Next.js version and whether the stable 16.2 line was recommended or already in use
+2. which Next.js references were loaded
+3. the architecture pattern chosen
+4. the change made
+5. the verification run
